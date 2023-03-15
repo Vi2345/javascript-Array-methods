@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Array Methods</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container py-5 my-5 bg-primary">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="array-methods text-center">
+                    <h1 class="display-2 text-center fs-1 fw-bold text-white">Array Methods</h1>
+                      <div class="tostring my-2 border p-4">
+                        <h2 class="display-3 text-center fs-2 fw-bold text-white"> Array To String Method</h2>
+                        <input type="text" id="text" placeholder="Enter the elements of an Array" class="form-control text-center">
+                        <button class="btn btn-success  mt-3" onclick="arraytoString()">To String Method</button>
+                        <p id="demo" class="bg-dark text-white  fw-bold"></p>
+                      </div>
+
+                      <div class="join my-2  border p-4">
+                        <h2 class="display-3 text-center fs-2 fw-bold text-white"> Array Join Method</h2>
+                        <input type="text" id="textjoin" placeholder="Enter the elements of an Array" class="form-control text-center">
+                        <label for="join" class="mt-2">Join:</label>
+                        <input type="text" id="join" class="mt-4" placeholder="Enter the Join element" class="mt-2"><br>
+                        <button class="btn btn-success  mt-3" onclick="joint()"> Join Method</button>
+                        <p id="demo1" class="bg-dark text-white  fw-bold"></p>
+                      </div>
+
+                      <div class="pop my-2  border p-4">
+                        <h2 class="display-3 text-center fs-2 fw-bold text-white"> Array Pop Method</h2>
+                        <input type="text" id="textpop" placeholder="Enter the elements of an Array" class="form-control text-center">
+                        <button class="btn btn-success  mt-3" onclick="popmethod()"> Pop Method</button>
+                        <p id="demo2" class="bg-dark text-white  fw-bold"></p>
+                      </div>
+
+                      <div class="push my-2  border p-4">
+                        <h2 class="display-3 text-center fs-2 fw-bold text-white"> Array Push Method</h2>
+                        <input type="text" id="textpush" placeholder="Enter the elements of an Array" class="form-control text-center">
+                        <label for="push" class="mt-2">push:</label>
+                        <input type="text" id="push" class="mt-4" placeholder="Enter the push element" class="mt-2"><br>
+                        <button class="btn btn-success  mt-3" onclick="pushmethod()">Push Method</button>
+                        <p id="demo3" class="bg-dark text-white  fw-bold"></p>
+                      </div> 
+
+                      <div class="shift my-2  border p-4">
+                        <h2 class="display-3 text-center fs-2 fw-bold text-white">Array Shift Method</h2>
+                        <input type="text" id="textshift" placeholder="Enter the elements of an Array" class="form-control text-center">
+                        <button class="btn btn-success  mt-3" onclick="shiftmethod()"> shift Method</button>
+                        <p id="demo4" class="bg-dark text-white  fw-bold"></p>
+                      </div> 
+                      <div class="unshift my-2  border p-4">
+                        <h2 class="display-3 text-center fs-2 fw-bold text-white">Array unShift Method</h2>
+                        <input type="text" id="textunshift" placeholder="Enter the elements of an Array" class="form-control text-center">
+                        <label for="unshift" class="mt-2">unshift:</label>
+                        <input type="text" id="unshift" placeholder="Enter the unshift element" class="mt-2"><br>
+                        <button class="btn btn-success  mt-3" onclick="unshiftmethod()"> unshift Method</button>
+                        <p id="demo5" class="bg-dark text-white  fw-bold"></p>
+                      </div> 
+                      <div class="delete my-2 border mx-2 p-3">
+                        <h2 class="display-3 text-center fs-2 fw-bold text-white">Array Delete Method</h2>
+                        <input type="text" id="textdelete" placeholder="Enter the elements of array" class="form-control text-center" >
+                        <input type="number"  id="delete" class="mt-2 " placeholder="Enter the Index element"><br>
+                        <button class="btn btn-success mt-3" onclick="deletemethod()">Delete Method</button>
+                        <p id="demo6" class="bg-dark text-white fw-bold"></p>
+                      </div>
+                      <div class="splice my-2  border p-4">
+                        <h2 class="display-3 text-center fs-2 fw-bold text-white">Array Splice Method</h2>
+                        <input type="text" id="textsplice" placeholder="Enter the elements of an Array" class="form-control text-center">
+                        <label for="Index" class="mt-2">Index:</label>
+                        <input type="number"  id="index" class="mt-2 " placeholder="Enter the Index element">
+                        <label for="Remove" class="mt-2">Remove:</label>
+                        <input type="number"  id="remove" class="mt-2 " placeholder="Enter the Remove element">
+                        <label for="Splice" class="mt-2">Splice:</label>
+                        <input type="text"   id="splice" placeholder="Enter the splice element" class="mt-2"><br>
+                        <button class="btn btn-success  mt-3" onclick="splicemethod()"> Splice Method</button>
+                        <p id="demo7" class="bg-dark text-white  fw-bold"></p>
+                      </div>
+                      <div class="concate my-2  border p-4">
+                        <h2 class="display-3 text-center fs-2 fw-bold text-white">Array Concate Method</h2>
+                        <input type="text" id="textconcate1" placeholder="Enter the elements of an first Array" class="form-control text-center">
+                        <input type="text" id="textconcate2" placeholder="Enter the elements of an second Array" class="form-control text-center mt-2">
+                        <input type="text" id="textconcate3" placeholder="Enter the text Array" class="mt-2"><br>
+                        <button class="btn btn-success  mt-3" onclick="concatemethod()"> Concate Method</button>
+                        <p id="demo8" class="bg-dark text-white  fw-bold"></p>
+                      </div>
+                      <div class="slice my-2 border mx-2 p-3">
+                        <h2 class="display-3 text-center fs-2 fw-bold text-white">Array Slice Method</h2>
+                        <input type="text" id="textslice" placeholder="Enter the elements of array" class="form-control text-center" >
+                        <input type="number"  id="start" class="mt-2 " placeholder="Enter the start element"><br>
+                        <input type="number"  id="stop" class="mt-2 " placeholder="Enter the  stop element"><br>
+                        <button class="btn btn-success mt-3" onclick="slicemethod()">Slice Method</button>
+                        <p id="demo9" class="bg-dark text-white fw-bold"></p>
+                      </div>  
+                      <div class="sort my-2  border p-4">
+                        <h2 class="display-3 text-center fs-2 fw-bold text-white">Array Sort and Reverse Method</h2>
+                        <input type="text" id="textsort" placeholder="Enter the elements of an Array" class="form-control text-center">
+                        <button class="btn btn-success  mt-3" onclick="sortmethod()"> sort Array Method</button>
+                        <button class="btn btn-success  mt-3" onclick="reversemethod()">Reverse Array Method</button>
+                        <button class="btn btn-success  mt-3" onclick="ascendingmethod()"> sort Ascending Method</button>
+                        <button class="btn btn-success  mt-3" onclick="descendingmethod()">sort Descending Method</button>
+                        <button class="btn btn-success  mt-3" onclick="myFunction1()">sort Alphabetically Method</button>
+                        <button class="btn btn-success  mt-3" onclick="myFunction2()">sort  Numerically Method</button>
+                        <button class="btn btn-success  mt-3" onclick="randommethod()">sort Random Method</button>
+                        <button class="btn btn-success  mt-3" onclick="Fisheryatesmethod()">Fisher Yates Method</button>
+                        <p id="demo10" class="bg-dark text-white  fw-bold"></p>
+                        <p id="demo11" class="bg-dark text-white  fw-bold"></p>
+                        <p id="demo12" class="bg-dark text-white  fw-bold"></p>
+                        <p id="demo13" class="bg-dark text-white  fw-bold"></p>
+                        <p id="demo14" class="bg-dark text-white  fw-bold"></p>
+                        <p id="demo15" class="bg-dark text-white  fw-bold"></p>
+                        <p id="demo16" class="bg-dark text-white  fw-bold"></p>
+                        <p id="demo17" class="bg-dark text-white  fw-bold"></p>
+                      </div> 
+                      <div class="find my-2 border mx-2 p-3">
+                        <input type="text" id="textfind" placeholder="Enter the elements of array" class="form-control text-center" >
+                        <button class="btn btn-success  mt-3" onclick="maxmethod()">Math.max Method</button>
+                        <button class="btn btn-success  mt-3" onclick="minmethod()">Math.min Method</button>
+                        <p id="demo18" class="bg-dark text-white fw-bold"></p>
+                        <p id="demo19" class="bg-dark text-white fw-bold"></p>
+                     
+
+                      </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
